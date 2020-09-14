@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:sharedUserId="android.uid.system" package="com.samsung.aasaservice" platformBuildVersionCode="21" platformBuildVersionName="5.0.1-I9500XXUHOI1">
+    <permission android:name="com.sec.android.SAMSUNG_AASASERVICE" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <application android:allowBackup="true" android:label="@string/app_name">
+        <service android:exported="true" android:name="com.samsung.aasaservice.AASAService" android:permission="com.sec.android.SAMSUNG_AASASERVICE">
+            <intent-filter>
+                <action android:name="com.samsung.aasaservice"/>
+            </intent-filter>
+        </service>
+        <receiver android:enabled="true" android:name=".AASAUpdateReceiver" android:permission="android.intent.action.BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+                <action android:name="android.intent.action.PACKAGE_CHANGED"/>
+                <action android:name="android.intent.action.PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

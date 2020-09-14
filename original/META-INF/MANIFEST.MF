@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Created-By: 1.7.0_55 (Oracle Corporation)
+
+Name: AndroidManifest.xml
+SHA1-Digest: PX9SpDdz2jUR8a1jbVjBSkflM0c=
+
+Name: resources.arsc
+SHA1-Digest: zafiyxCluA3v6qcokRtRGcLZS2Q=
+
+Name: res/raw/dummy.txt
+SHA1-Digest: 2jmj7l5rSw0yVb/vlWAYkK/YBwk=
+
